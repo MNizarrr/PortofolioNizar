@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Jejak Karbon</title>
+    <link rel="stylesheet" href="pipas.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Jejak Karbon</h1>
+        <form id="carbonCalculator">
+            <label for="device">Pilih Barang Elektronik:</label>
+            <select id="device" name="device" required>
+                <option value="" disabled selected>Pilih perangkat</option>
+                <option value="komputer">Komputer</option>
+                <option value="kulkas">Kulkas</option>
+                <option value="mesin_cuci">Mesin Cuci</option>
+                <option value="kipas_angin">Kipas Angin</option>
+                <option value="televisi">Televisi</option>
+                <option value="rice_cooker">Rice Cooker</option>
+            </select>
+
+            <label for="quantity">Jumlah Barang:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <label for="hours">Lama Penggunaan (jam/hari):</label>
+            <input type="number" id="hours" name="hours" min="1" required>
+
+            <label for="days">Lama Penggunaan (hari/bulan):</label>
+            <input type="number" id="days" name="days" min="1" required>
+
+            <button type="button" onclick="calculateCarbon()">Hitung Jejak Karbon</button>
+        </form>
+
+        <div id="result" class="result hidden">
+            <h2>Hasil Perhitungan</h2>
+            <p>Jejak Karbon: <span id="carbonFootprint">0</span> kg CO2</p>
+            <p>Jumlah Pohon yang Dibutuhkan: <span id="treesRequired">0</span> pohon</p>
+            <canvas id="carbonChart"></canvas>
+        </div>
+
+        <div id="history" class="history">
+            <h2>Riwayat Perhitungan</h2>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+
+    <script src="pipas.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Deret Geometri</title>
+    <link rel="stylesheet" href="geo.css">
+    <link rel="icon" type="png" href="ICon.png">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Kalkulator Deret Geometri</h1>
+        <label for="suku-pertama">Suku Pertama (a):</label>
+        <input type="number" id="suku-pertama" placeholder="Masukkan suku pertama">
+
+        <label for="rasio">Rasio (r):</label>
+        <input type="number" id="rasio" placeholder="Masukkan rasio">
+
+        <label for="suku-ke">Suku ke-n:</label>
+        <input type="number" id="suku-ke" placeholder="Masukkan n">
+
+        <button onclick="hitungSukuKeN()">Hitung</button>
+
+        <h2>Hasil:</h2>
+        <p id="hasil"></p>
+    </div>
+
+    <script src="geo.js"></script>
+</body>
+</html>
